@@ -7,8 +7,8 @@
  * All other components typically branch off from here.
  */
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // named import
-import Login from './pages/Login';  // default import
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // named import
+import Login from './pages/Login'; // default import
 
 // Component Function
 /**
@@ -17,13 +17,13 @@ import Login from './pages/Login';  // default import
  * Standard HTML elements use lowercase names (e.g., <div />).
  */
 function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Login />} />
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

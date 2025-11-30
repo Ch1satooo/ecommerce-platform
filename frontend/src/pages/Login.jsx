@@ -3,9 +3,8 @@ import { Button, Stack, Typography, useMediaQuery } from '@mui/material';
 import theme from '../theme/theme';
 import Lottie from 'lottie-react';
 import { ecommerceOutlookAnimation } from '../assets';
-import { EmailInput } from '../components/form/EmailInput';
+import { FormInput } from '../components/form/FormInput';
 import { useForm } from 'react-hook-form';
-import { PasswordInput } from '../components/form/PasswordInput';
 import { motion, MotionConfig } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -53,7 +52,7 @@ export default function Login() {
           noValidate
           onSubmit={handleSubmit(onSubmit)}
         >
-          <EmailInput
+          <FormInput
             fieldProps={register('email', {
               required: 'Email is required',
               pattern: {
@@ -63,10 +62,12 @@ export default function Login() {
               },
             })}
             error={errors.email}
+            placeholder={'Email'}
           />
-          <PasswordInput
+          <FormInput
             fieldProps={register('password', { required: 'Password is required' })}
             error={errors.password}
+            placeholder={'Password'}
           />
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 1 }}>
             <Button
